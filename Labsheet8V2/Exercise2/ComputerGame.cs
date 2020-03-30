@@ -9,7 +9,7 @@ namespace Exercise2
 {
     public class ComputerGame
     {
-        public int GameID { get; set; }
+        public int ID { get; set; }
         public string GameName { get; set; }
         public int YearReleased { get; set; }
         public string Genre { get; set; }
@@ -21,7 +21,7 @@ namespace Exercise2
     public class Character
     {
         public int CharacterID { get; set; }
-        public int GameID { get; set; }
+        public int ID { get; set; }
         public string CharacterName { get; set; }
         public string CharacterImage  { get; set; }
 

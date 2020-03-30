@@ -23,7 +23,7 @@ namespace Labsheet8V2
         public string TeamName { get; set; }
         public string Location { get; set; }
         public string HomeGround { get; set; }
-
+        public int Capacity { get; set; }
         public virtual List<Player> Players { get; set; }
     }
 
