@@ -16,6 +16,11 @@ namespace Exercise2
 
         
         public virtual List<Character> Characters { get; set; }
+
+        public override string ToString()
+        {
+            return GameName;
+        }
     }
 
     public class Character
@@ -26,6 +31,11 @@ namespace Exercise2
         public string CharacterImage  { get; set; }
 
         public virtual ComputerGame ComputerGame { get; set; }
+
+        public override string ToString()
+        {
+            return CharacterName;
+        }
     }
 
     public class ComputerGameData : DbContext

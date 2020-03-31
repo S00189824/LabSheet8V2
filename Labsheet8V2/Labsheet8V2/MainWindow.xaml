@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Labsheet8V2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
     <Grid>
-        
+        <ListBox x:Name="LbxGames" HorizontalAlignment="Left" Height="215" Margin="80,106,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="LbxGames_SelectionChanged"/>
+        <ListBox x:Name="LbxCharacterList" HorizontalAlignment="Left" Height="215" Margin="335,106,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="LbxCharacterList_SelectionChanged"/>
+        <Rectangle x:Name="Image" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="215" Margin="568,106,0,0" Stroke="Black" VerticalAlignment="Top" Width="190"/>
+
     </Grid>
 </Window>

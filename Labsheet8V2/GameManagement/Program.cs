@@ -17,11 +17,11 @@ namespace GameManagement
             {
                 ComputerGame g1 = new ComputerGame { ID = 1, GameName = "Borderlands", YearReleased = 2019, Genre = "FPS" };
                 Character p1 = new Character { CharacterID = 1, CharacterName = "Flak", CharacterImage = "c1", ComputerGame = g1,ID = 1 };
-                Character p2 = new Character { CharacterID = 2, CharacterName = "Amara", CharacterImage = "c4", ComputerGame = g1,ID = 1 };
+                Character p2 = new Character { CharacterID = 2, CharacterName = "Amara", CharacterImage = "c2", ComputerGame = g1,ID = 1 };
 
                 ComputerGame g2 = new ComputerGame { ID = 2, GameName = "Gran Blue Fantasy", YearReleased = 2020, Genre = "RPG" };
                 Character p3 = new Character { CharacterID = 3, CharacterName = "Emilia", CharacterImage = "c3",ComputerGame = g2,ID = 2 };
-                Character p4 = new Character { CharacterID = 4, CharacterName = "Tom", CharacterImage = "c2",ComputerGame = g2,ID = 2 };
+                Character p4 = new Character { CharacterID = 4, CharacterName = "Tom", CharacterImage = "c4",ComputerGame = g2,ID = 2 };
 
                 db.Games.Add(g1);
                 db.Games.Add(g2);
