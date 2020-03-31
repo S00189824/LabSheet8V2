@@ -22,6 +22,7 @@ namespace Labsheet8V2
     public partial class MainWindow : Window
     {
         ComputerGameData db = new ComputerGameData();
+        string URL = @"C:\Users\David\Documents\GitHub\LabSheet8V2\Labsheet8V2\Labsheet8V2\Images\";
 
         public MainWindow()
         {
@@ -34,19 +35,28 @@ namespace Labsheet8V2
         {
             ComputerGame selectedItem = LbxGames.SelectedItem as ComputerGame;
 
-            var quer1 = from g in db.Characters
-                        where g.ID.Equals(selectedItem.ID)
-                        select g;
+            if(selectedItem != null)
+            {
+                var quer1 = from g in db.Characters
+                            where g.ID.Equals(selectedItem.ID)
+                            select g;
 
-            LbxCharacterList.ItemsSource = quer1.ToList();
+                LbxCharacterList.ItemsSource = quer1.ToList();
+            }
+
+            
         }
 
         private void LbxCharacterList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Character selecteditem = LbxCharacterList.SelectedItem as Character;
 
-            var query = from c in db.Characters
-                        select c.CharacterImage;
+            if(selecteditem != null)
+            {
+                Image.Fill = new ImageBrush(new BitmapImage(new Uri(URL + selecteditem.CharacterImage + ".jpg", UriKind.Relative)));
+            }
+
+            
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
